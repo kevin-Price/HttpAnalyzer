@@ -16,7 +16,10 @@ logger = logging.getLogger(__name__)
 async def main(req: func.HttpRequest) -> func.HttpResponse:
     start_time = time.perf_counter()
 
-    total_websites = int(req.params.get('total_websites'))
+    total_websites = 1000
+    if req.params.get('total_websites'):
+        total_websites = int(req.params.get('total_websites'))
+
     websites = webreader.read_websites_from_csv("assets/website_list.csv", total_websites)
 
     async with ClientSession(connector=aiohttp.TCPConnector(limit=1000, verify_ssl=False)) as session:
