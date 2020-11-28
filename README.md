@@ -5,7 +5,7 @@ Given a number of websites to analyze, this function will return its running tim
 
 ## How to use
 Issue a request: ```GET https://httpanalyzer.azurewebsites.net/api/analyze_websites?total_websites=1000```
-
+This is included in the postman collection
 *It may take up to 30 seconds for the server to respond to your request*
 
 
