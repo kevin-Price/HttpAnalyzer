@@ -5,7 +5,9 @@ Given a number of websites to analyze, this function will return its running tim
 
 ## How to use
 ### Azure
-Issue a GET request:
+Issue a request: ```GET https://httpanalyzer.azurewebsites.net/api/analyze_websites?total_websites=1000```
+
+*It may take up to 30 seconds for the server to respond to your request*
 
 ### Locally
 
