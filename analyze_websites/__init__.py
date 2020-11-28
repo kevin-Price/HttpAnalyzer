@@ -23,7 +23,7 @@ async def main(req: func.HttpRequest) -> func.HttpResponse:
     websites = webreader.read_websites_from_csv("assets/website_list.csv", total_websites)
 
     async with ClientSession(connector=aiohttp.TCPConnector(limit=1000, verify_ssl=False)) as session:
-        headers = await asyncio.gather(*[__get_website_headers_async(website, session, 30) for website in websites])
+        headers = await asyncio.gather(*[__get_website_headers_async(website, session, 60) for website in websites])
 
     top_ten_headers = analyzer.get_top_ten_headers(headers)
     top_ten_header_percentages = analyzer.get_header_percentages(top_ten_headers, total_websites)
