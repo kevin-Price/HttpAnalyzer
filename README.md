@@ -4,12 +4,9 @@ This is an Azure function that will analyze a specified number of website's head
 Given a number of websites to analyze, this function will return its running time, the top 10 most frequest headers, and a percentage of how many times those headers occured.
 
 ## How to use
-### Azure
 Issue a request: ```GET https://httpanalyzer.azurewebsites.net/api/analyze_websites?total_websites=1000```
 
 *It may take up to 30 seconds for the server to respond to your request*
-
-### Locally
 
 
 ## Optional Query Params
